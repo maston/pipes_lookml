@@ -65,7 +65,7 @@
 # 
 # - explore: sf_livechat_transcript__c_overflow
 # 
-# - explore: sf_opportunity_overflow
+# - explore: sf_opportunity
 
 # - explore: sf_pi__ldfilter__c_overflow
 

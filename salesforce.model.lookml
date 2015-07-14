@@ -17,7 +17,7 @@
 
 # - explore: sf_account_overflow
 
-- explore: sf_announcement_overflow
+# - explore: sf_announcement_overflow
 
 - explore: sf_asset_overflow
 

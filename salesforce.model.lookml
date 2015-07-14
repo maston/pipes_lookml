@@ -13,9 +13,3 @@
 - explore: contact
 
 - explore: lead
-
-# - explore: sf_pi__objectchangelog__c
-# 
-# - explore: sf_pricebook2
-# 
-# - explore: sf_product2

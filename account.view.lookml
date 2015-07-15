@@ -39,7 +39,7 @@
   - dimension: last_modified_by_id
     sql: ${TABLE}."LastModifiedById"
 
-  - dimension: last_modified_date
+  - dimension: last_modified
     type: time
     timeframes: [date, month, week]
     sql: TO_DATE(substring(${TABLE}."LastModifiedDate",1,10) || ' ' || substring(${TABLE}."LastModifiedDate",12,8),'YYYY-MM-DD HH24:MI:SS') 

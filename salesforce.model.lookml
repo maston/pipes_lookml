@@ -13,3 +13,5 @@
 - explore: contact
 
 - explore: lead
+
+- explore: opportunity

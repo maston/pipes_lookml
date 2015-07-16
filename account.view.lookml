@@ -56,7 +56,7 @@
   - dimension: system_modstamp
     sql: ${TABLE}."SystemModstamp"
 
-  - dimension: total_number_of_nodes__c
+  - dimension: total_number_of_nodes
     type: number
     sql: ${TABLE}."Total_number_of_nodes__c"
 

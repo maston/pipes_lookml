@@ -1,4 +1,4 @@
-- view: campaignmember
+- view: campaign_member
   sql_table_name: '"sf_campaignmember"'
   fields:
 

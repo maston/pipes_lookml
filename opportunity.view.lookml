@@ -16,11 +16,12 @@
   - dimension: campaign_id
     sql: ${TABLE}."CampaignId"
 
-  - dimension: close_date
+  - dimension_group: close
+    sql: ${TABLE}."CloseDate"
     type: time
-    timeframes: [date, month, week]
-    sql: TO_DATE(substring(${TABLE}."CloseDate",1,10) || ' ' || substring(${TABLE}."CloseDate",12,8),'YYYY-MM-DD HH24:MI:SS') 
-
+    timeframes: [date,week,month,year]
+    convert_tz: false
+    
   - dimension: contract_term
     sql: ${TABLE}."Contract_Term__c"
 
@@ -189,6 +190,10 @@
   - measure: count
     type: count
     drill_fields: detail*
+  
+  - measure: cumulative_total
+    type: running_total
+    sql: ${count}
   
   - measure: total_acv
     type: sum

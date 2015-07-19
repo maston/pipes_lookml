@@ -74,6 +74,7 @@
 
   - dimension: id
     sql: ${TABLE}."Id"
+    primary_key: true
 
   - dimension: is_closed
     type: number
@@ -191,6 +192,11 @@
     type: count
     drill_fields: detail*
   
+  - measure: count_won
+    type: count
+    filter: 
+      is_won: 1
+      
   - measure: cumulative_total
     type: running_total
     sql: ${count}

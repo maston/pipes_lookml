@@ -109,8 +109,8 @@
     type: number
     sql: ${TABLE}."Lifetime_Expected_Value__c"
 
-  - dimension: mrr
-    sql: ${TABLE}."MRR__c"
+#   - dimension: mrr
+#     sql: ${TABLE}."MRR__c"
 
   - dimension: name
     sql: ${TABLE}."Name"
@@ -196,75 +196,32 @@
     type: count
     filter: 
       is_won: 1
+    drill_fields: detail*
       
   - measure: cumulative_total
     type: running_total
     sql: ${count}
+    drill_fields: detail*
   
   - measure: total_acv
     type: sum
     sql: ${acv}
     value_format: '$#,##0.00'
+    drill_fields: detail*
   
-  - measure: total_mrr
-    type: sum
-    sql: ${mrr}
-    value_format: '$#,##0.00'
+#   - measure: total_mrr
+#     type: sum
+#     sql: ${mrr}
+#     value_format: '$#,##0.00'
+#     drill_fields: detail*
 
   sets:
     detail:
-      - acv__c
-      - accountid
-      - cra_compelling_reason_to_act__c
-      - campaignid
-      - closedate
-      - contract_term__c
-      - createdbyid
-      - createddate
-      - executive_sponsor__c
-      - fiscal
-      - fiscalquarter
-      - fiscalyear
-      - forecastcategory
-      - forecastcategoryname
-      - hasopportunitylineitem
-      - ibm_forecast_stage__c
-      - ibm_opp_id__c
-      - ibm_sales_stage__c
-      - imt__c
-      - iot__c
+      - close_date
+      - created_date
       - id
-      - isclosed
-      - isdeleted
-      - iswon
-      - is_this_follow_on_to_poc__c
-      - lastmodifiedbyid
-      - lastmodifieddate
-      - leadsource
-      - lead_source_group__c
-      - lifetime_expected_value__c
-      - mrr__c
+      - mrr
       - name
-      - new_appt_date__c
-      - number_of_deals__c
-      - ownerid
       - probability
-      - probability_of_closure_cq__c
-      - projected_turnover_date__c
-      - revenue_type2__c
-      - signings2x__c
       - stagename
-      - steps_to_closure__c
-      - supportplan__c
-      - support_contact1__c
-      - systemmodstamp
-      - total_revenue1__c
       - type
-      - type_finance__c
-      - uvp_unique_value_proposition__c
-      - _id
-      - _rev
-      - attributes_type
-      - attributes_url
-      - pt_type
-

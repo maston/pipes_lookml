@@ -15,6 +15,19 @@
 - explore: contact
 
 - explore: lead
+  joins: 
+  - join: contact
+    sql_on: ${contact.id} = ${lead.converted_contact_id}
+    relationship: many_to_one
+    
+  - join: account
+    sql_on: ${account.id} = ${lead.converted_account_id}
+    relationship: many_to_one
+    
+  - join: opportunity
+    sql_on: ${opportunity.id} = ${lead.converted_opportunity_id}
+    relationship: many_to_one
+      
 
 - explore: opportunity
   joins: 

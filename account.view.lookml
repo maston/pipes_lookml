@@ -29,9 +29,9 @@
 
   - dimension_group: created
     type: time
-    timeframes: [date, month, week, day_of_week, year]
+    timeframes: [date, month, week, year]
     sql: TO_DATE(substring(${TABLE}."CreatedDate",1,10) || ' ' || substring(${TABLE}."CreatedDate",12,8),'YYYY-MM-DD HH24:MI:SS') 
-  
+
   - dimension: is_deleted
     type: int
     sql: ${TABLE}."IsDeleted"

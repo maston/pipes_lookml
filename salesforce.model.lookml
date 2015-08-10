@@ -1,4 +1,4 @@
-- connection: pipes_maston
+- connection: pipes
 
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards

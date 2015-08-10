@@ -10,7 +10,7 @@
   - name: add_a_unique_name_543
     title: Total Leads
     type: single_value
-    model: salesforce_orig
+    model: salesforce
     explore: lead
     measures: [lead.count]
     sorts: [lead.count desc]
@@ -37,7 +37,7 @@
   - name: add_a_unique_name_121
     title: Total Opportunities
     type: single_value
-    model: salesforce_orig
+    model: salesforce
     explore: opportunity
     measures: [opportunity.count]
     sorts: [opportunity.count desc]
@@ -64,7 +64,7 @@
   - name: add_a_unique_name_651
     title: Total ACV
     type: single_value
-    model: salesforce_orig
+    model: salesforce
     explore: opportunity
     measures: [opportunity.total_acv]
     sorts: [opportunity.total_acv desc]
@@ -91,7 +91,7 @@
   - name: add_a_unique_name_736
     title: Lead Status by Geo
     type: looker_column
-    model: salesforce_orig
+    model: salesforce
     explore: lead
     dimensions: [lead.geo, lead.status]
     pivots: [lead.geo]
@@ -120,7 +120,7 @@
   - name: add_a_unique_name_231
     title: Overall Lead Status Percentage
     type: looker_pie
-    model: salesforce_orig
+    model: salesforce
     explore: lead
     dimensions: [lead.status]
     measures: [lead.count]
@@ -149,7 +149,7 @@
   - name: add_a_unique_name_630
     title: Accounts by Country
     type: looker_geo_choropleth
-    model: salesforce_orig
+    model: salesforce
     explore: account
     dimensions: [account.billing_country]
     measures: [account.count]
@@ -180,7 +180,7 @@
   - name: add_a_unique_name_65
     title: Opportunities by Close Week
     type: looker_area
-    model: salesforce_orig
+    model: salesforce
     explore: opportunity
     dimensions: [opportunity.close_week]
     measures: [opportunity.count, opportunity.cumulative_total]
@@ -214,7 +214,7 @@
   - name: add_a_unique_name_865
     title: Lead to Win Funnel
     type: looker_column
-    model: salesforce_orig
+    model: salesforce
     explore: lead
     measures: [lead.count, opportunity.count, opportunity.count_won]
     sorts: [lead.count desc]
@@ -237,7 +237,3 @@
     y_axis_combined: true
     colors: ['#635189', '#776fdf', '#1ea8df', '#a2dcf3', '#49cec1', '#e9b404', '#dc7350',
       '#ed6168']
-
-
-
-
